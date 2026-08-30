@@ -28,7 +28,8 @@ echo       Done.
 
 echo.
 echo [4/4] Deleting all raw downloads...
-del /Q ".\Tables\Raw_Downloads\*"
+.\Tables\delete_files.bat
+
 if errorlevel 1 goto :error
 echo       Done.
 
