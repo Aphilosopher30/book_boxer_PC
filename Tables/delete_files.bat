@@ -16,4 +16,3 @@ echo Deleting files from: %~1
 del /Q "%~1\*"
 
 echo Done.
-
