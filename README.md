@@ -28,7 +28,7 @@ Open `config.py` and set:
 ## Running the script
 
 **Normal run:**
-```bash
+```
 python export_collections.py
 ```
 
