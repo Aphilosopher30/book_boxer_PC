@@ -13,7 +13,7 @@ Make sure Python 3 is installed: https://python.org/downloads
 ### 2. Install dependencies
 Open a terminal in this folder and run:
 
-```bash
+```cmd
 pip install -r requirements.txt
 playwright install chrome
 ```
@@ -28,22 +28,22 @@ Open `config.py` and set:
 ## Running the script
 
 **Normal run:**
-```
+```cmd
 python export_collections.py
 ```
 
 **Save to a specific folder:**
-```bash
+```cmd
 python export_collections.py --out ~/Desktop/my-exports
 ```
 
 **Use a different URL:**
-```bash
+```cmd
 python export_collections.py --url https://example.com/settings
 ```
 
 **Re-login (clear saved session):**
-```bash
+```cmd
 python export_collections.py --reset-login
 ```
 
