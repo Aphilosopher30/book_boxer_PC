@@ -43,7 +43,7 @@ echo       Done.
 
 echo.
 echo [4/4] Deleting all raw downloads...
-.\Tables\delete_files.bat 
+.\Tables\delete_files.bat .\Tables\Raw_Downloads\
 
 if errorlevel 1 goto :error
 echo       Done.
