@@ -14,9 +14,24 @@ python export_collections.py
 if errorlevel 1 goto :error
 echo       Done.
 
+setlocal enableDelayedExpansion
+
+set "FOLDER=.\Tables\Raw_Downloads\"
+
+set "FILES="
+for %%f in ("%FOLDER%\*.csv") do (
+  set "FILES=!FILES! "%%~ff""
+)
+
+echo.
+echo "---=====-----=====-----"
+echo.
+echo %FILES%
+echo.
+
 echo.
 echo [2/4] Running Tables/combine_csvs.py...
-python Tables\combine_csvs.py .\Tables\Raw_Downloads\*.csv --output Tables\all_collections.csv
+python Tables\combine_csvs.py %FILES% --output Tables\all_collections.csv
 if errorlevel 1 goto :error
 echo       Done.
 
@@ -28,7 +43,7 @@ echo       Done.
 
 echo.
 echo [4/4] Deleting all raw downloads...
-.\Tables\delete_files.bat
+.\Tables\delete_files.bat 
 
 if errorlevel 1 goto :error
 echo       Done.
