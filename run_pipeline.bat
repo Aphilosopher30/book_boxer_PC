@@ -24,12 +24,6 @@ for %%f in ("%FOLDER%\*.csv") do (
 )
 
 echo.
-echo "---=====-----=====-----"
-echo.
-echo %FILES%
-echo.
-
-echo.
 echo [2/4] Running Tables/combine_csvs.py...
 python Tables\combine_csvs.py %FILES% --output Tables\all_collections.csv
 if errorlevel 1 goto :error
